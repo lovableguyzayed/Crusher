@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@500&display=swap");
+body { margin: 0; font-family: var(--font-sans); background: var(--surface); color: var(--ink); font-size: 15px; line-height: 22px; }
+.usc-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-4); }
+.usc-stack { display: grid; gap: var(--space-3); padding: var(--space-4); }
+
+/* Button */
+.usc-btn { font: inherit; font-weight: 600; font-size: 15px; height: 40px; padding: 0 var(--space-4); border-radius: var(--radius-md); border: 1px solid var(--line-strong); background: var(--surface-raised); color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: var(--space-2); }
+.usc-btn:hover { border-color: var(--ink-muted); }
+.usc-btn-primary { background: var(--orange); border-color: var(--orange); color: var(--on-orange); }
+.usc-btn-primary:hover { border-color: var(--on-orange); }
+.usc-btn-ghost { background: transparent; border-color: transparent; color: var(--orange-text); }
+.usc-btn-sm { height: 32px; font-size: 13px; padding: 0 var(--space-3); }
+.usc-btn:focus-visible, .usc-input:focus-visible, .usc-nav-item:focus-visible { outline: 2px solid transparent; box-shadow: var(--focus-ring); }
+.usc-btn[disabled] { opacity: .5; cursor: not-allowed; }
+
+/* Badge */
+.usc-badge { display: inline-flex; align-items: center; gap: var(--space-1); font-size: 12px; font-weight: 600; line-height: 20px; padding: 0 var(--space-2); border-radius: var(--radius-sm); background: var(--surface-sunken); color: var(--ink-muted); white-space: nowrap; }
+.usc-badge-day { background: var(--orange-soft); color: var(--orange-text); }
+.usc-badge-night { background: var(--night-soft); color: var(--night); }
+.usc-badge-success { background: var(--success-soft); color: var(--success); }
+.usc-badge-danger { background: var(--danger-soft); color: var(--danger); }
+
+/* Stat card */
+.usc-stat { display: flex; gap: var(--space-3); align-items: center; background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-4); box-shadow: var(--shadow-card); min-width: 0; }
+.usc-stat-icon { flex: none; width: 44px; height: 44px; border-radius: var(--radius-md); background: var(--orange); color: var(--on-orange); display: grid; place-items: center; }
+.usc-stat-label { font-size: 13px; line-height: 18px; color: var(--ink-muted); font-weight: 500; }
+.usc-stat-value { font-size: 26px; line-height: 32px; font-weight: 700; white-space: nowrap; }
+.usc-stat-caption { font-size: 12px; line-height: 16px; font-weight: 600; color: var(--orange-text); }
+.usc-stat-caption.is-danger { color: var(--danger); }
+
+/* Card */
+.usc-card { background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+.usc-card-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--line); }
+.usc-card-title { margin: 0; font-size: 17px; line-height: 24px; font-weight: 600; }
+.usc-card-body { padding: var(--space-4); }
+.usc-band { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; background: var(--orange); color: var(--on-orange); padding: var(--space-2) var(--space-4); border-radius: var(--radius-md) var(--radius-md) 0 0; }
+
+/* Field */
+.usc-field { display: grid; gap: var(--space-1); min-width: 0; }
+.usc-label { font-size: 13px; line-height: 18px; font-weight: 500; color: var(--ink-muted); }
+.usc-input { font: inherit; height: 40px; box-sizing: border-box; width: 100%; padding: 0 var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--line-strong); background: var(--surface-sunken); color: var(--ink); }
+textarea.usc-input { height: auto; min-height: 64px; padding: var(--space-2) var(--space-3); }
+.usc-input[readonly] { border-style: dashed; color: var(--ink-muted); }
+.usc-field.is-error .usc-input { border-color: var(--danger); }
+.usc-hint { font-size: 12px; line-height: 16px; color: var(--ink-muted); }
+.usc-field.is-error .usc-hint { color: var(--danger); font-weight: 600; }
+.usc-plate { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .02em; }
+
+/* Table */
+.usc-table-wrap { overflow-x: auto; }
+.usc-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.usc-table th { text-align: left; font-size: 12px; font-weight: 600; letter-spacing: .02em; color: var(--ink-muted); background: var(--surface-sunken); padding: var(--space-2) var(--space-3); white-space: nowrap; }
+.usc-table td { padding: var(--space-2) var(--space-3); border-top: 1px solid var(--line); white-space: nowrap; }
+.usc-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.usc-table tfoot td { font-weight: 700; border-top: 2px solid var(--line-strong); }
+.usc-table tbody tr:hover td { background: var(--surface-sunken); }
+
+/* Nav */
+.usc-nav { display: grid; gap: var(--space-1); padding: var(--space-3); background: var(--surface-sunken); }
+.usc-nav-item { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; border: 0; background: none; font-family: inherit; cursor: pointer; text-align: left; }
+.usc-nav-item:hover { background: var(--surface-raised); }
+.usc-nav-item[aria-current="page"] { background: var(--orange); color: var(--on-orange); font-weight: 600; }
+
+/* Meter (material bars) */
+.usc-meter { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: var(--space-3); font-size: 13px; }
+.usc-meter-track { height: 12px; border-radius: var(--radius-sm); background: var(--surface-sunken); overflow: hidden; }
+.usc-meter-fill { height: 100%; background: var(--orange); border-radius: var(--radius-sm); }
+.usc-meter-value { font-variant-numeric: tabular-nums; color: var(--ink-muted); min-width: 64px; text-align: right; }
+
+/* Wordmark */
+.usc-wordmark { font-family: var(--font-display); font-weight: 700; line-height: .95; letter-spacing: .01em; text-transform: uppercase; display: inline-grid; }
+.usc-wordmark b { color: var(--ink); font-size: 1em; font-weight: 700; }
+.usc-wordmark span { color: var(--orange-text); font-size: .74em; letter-spacing: .06em; }
